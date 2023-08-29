@@ -1,0 +1,34 @@
+h1, 
+p, 
+h2 
+{
+    font-family: sans-serif;
+}
+
+#java > h2{
+    background-color: orange;
+    color: aliceblue;
+}
+
+
+#python > h2, #python > p {
+    background-color: lightskyblue;
+    color: antiquewhite;
+    
+}
+
+button {
+    color: aliceblue;
+}
+
+.cart-button{
+    background-color: green;
+}
+
+#python > .buy-button{
+    background-color: lightskyblue;
+}
+
+#java > .buy-button{
+    background-color: orange;
+}
