@@ -1,0 +1,28 @@
+article > p:first-of-type{
+    color: blue;
+    font-style: italic;
+}
+
+ul:last-of-type > li:nth-child(odd){
+    background-color: darkslateblue;
+}
+
+ul:first-of-type > li:nth-child(2n+1){
+    background-color: orange;
+}
+
+p:last-child{
+    color: chartreuse;
+}
+
+p:only-child{
+    background-color: darkblue;
+}
+
+.first,
+.second{
+    background-color: darkgreen;
+}
+p:not(.third){
+    color: fuchsia;
+}
