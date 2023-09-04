@@ -1,0 +1,12 @@
+section ul li {
+    color: deeppink;
+}
+
+article > p{
+    font-style: italic;
+
+}
+
+article ol {
+    color: firebrick;
+}

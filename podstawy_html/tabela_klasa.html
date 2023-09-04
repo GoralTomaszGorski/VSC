@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Przepis na Gołąbki</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Tabele w HTML są dosyć rozbudowanym elementem, który posiada najczęściej kilka poziomów zagnieżdżeń. W najprostszej postaci składa się jednak z nadrzędnego elementu <table> z zagnieżdżonymi wierszami <tr> (table row) i kolumnami w ramach wierszy, czyli <td> (table data) lub <th> (table header). Dla podniesienia czytelności kodu i nadania mu lepszego znaczenia w ramach tabeli można wydzielić dodatkowe sekcje">
+    </head>
+    <body>
+
+        <table border="1">
+            <caption>Oceny semestralne uczniów</caption>
+            <thead>
+                <tr>
+                    <th colspan="2">Dane ucznia</th>
+                    <th colspan="2">Ocena</th>
+                </tr>
+                <tr>
+                    <th>Uczeń</th>
+                    <th>Klasa</th>
+                    <th>aktualna</th>
+                    <th>przeidywana</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Karol Bąk</td>
+                    <td rowspan="2">4a</td>
+                    <td>3</td>
+                    <td>3</td>
+                </tr>
+                <tr>               
+                    <td>Ola Zając</td>
+                    <td>4</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Adam Kot</td>
+                    <td>1d</td>
+                    <td>5</td>
+                    <td>3</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </body>
+</html>

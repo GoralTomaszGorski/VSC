@@ -1,0 +1,27 @@
+#first_benefit{
+    color: blue;
+}
+#second_benefit{
+    color: chocolate;
+}
+#third_benefit{
+    color: darkgreen;
+}
+
+.odd{
+    color: orange;
+}
+
+.even{
+    color: cyan;
+}
+
+[href^="#"] {
+    color: orange;
+}
+
+[href*="javastart.pl"] {
+    color: green;
+}
+
+[href *= "javastart"]

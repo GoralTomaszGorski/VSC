@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Ksiązka kucharska</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Przykładowy Formularz Książki kucharskiej">
+    </head>
+    <body>
+        <h1>Ksiązka kucharska</h1>
+        <h2>Dodaj przepis</h2>
+        <form>
+            <fieldset>
+                <legend>Nowy przepis</legend>
+                <div>
+                    <label for="recipeName">nazwa przepisu</label>
+                    <input type="text" id="recipeName" placeholder="np. gołąbki z kurkami" required>
+                </div>
+                <div>
+                    <label for="category">Kategoria</label>
+                    <select id="category">
+                        <option>śniadanie</option>
+                        <option>obiad</option>
+                        <option>kolacja</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="tag">Tag</label>
+                    <input list="tags" id="tag">
+                    <datalist id="tags">
+                        <option value="czekolada">
+                        <option value="warzywo">
+                        <option value="wege">
+                    </datalist>
+                </div>
+                <div>
+                    <input type="number" min="1" max="5" step="0.5">
+                </div>
+                <div>
+                    <p><label for="prep">Sposób przygotowania</label></p>
+                    <textarea id="prep" cols="30" rows="5"></textarea>
+                </div>               
+            </fieldset>
+            
+            <button>Dodaj przepis</button>
+
+        </form>
+    </body>
+</html>

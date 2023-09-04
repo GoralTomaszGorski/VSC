@@ -1,0 +1,13 @@
+.ingredients{
+    color: red;
+    border: solid black;
+
+}
+
+h2{
+    border: inherit;
+}
+
+section > h2{
+    background-color: aqua;
+}
