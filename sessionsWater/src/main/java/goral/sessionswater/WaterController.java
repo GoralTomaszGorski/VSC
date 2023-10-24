@@ -36,9 +36,9 @@ public class WaterController extends HttpServlet {
         Object water = session.getAttribute("water");
         int resultWater;
         if (water == null) {
-            resultWater = 250;
+            resultWater = GLASS_OF_WATER;
         } else {
-            resultWater = (Integer)water + 250;
+            resultWater = (int)water + GLASS_OF_WATER;
         }
 
         session.setAttribute("water", resultWater);

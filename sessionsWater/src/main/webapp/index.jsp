@@ -8,14 +8,14 @@
 <h1>Śledzenie poziomu nawodnienia organizmu</h1>
 <form action="control">
   <button name="option" value="water">Dodaj szklanke wody</button>
-  <button name="option" value="claer">Wyzeruj nawodninie</button>
+  <button name="option" value="clear">Wyzeruj nawodninie</button>
 
 </form>
 <%
   Object water = request.getSession().getAttribute("water");
   if (water == null) {
 %>
-<h2>Dziś jeszcze nic nie wupiłeś!</h2>
+<h2>Dziś jeszcze nic nie wypiłeś!</h2>
 <%
 } else {
 %>
