@@ -1,0 +1,201 @@
+
+/*CSS reset*/
+* {
+    margin: 0;
+    padding: 0;
+
+}
+/*Zmiana domyślnego fontu*/
+body {
+    font-family: 'Montserrat';
+    background-image: url("../images/gory2.jpg");
+    background-position: center;
+}
+/*Ustawienie koloru odnośników i usunięcie podkreśleń*/
+a {
+    text-decoration: none;
+    color: black;
+}
+/*Kolor tła w głównym kontenerze i ustawienie elastycznego rozkładu
+Elementy będą ustawiane jeden pod drugim
+*/
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    padding: 2%;
+}
+
+/*Główna sekcja powinna być skalowana wraz z rozciąganiem okna przeglądarki
+i powinna zajmować większość dostępnej przestrzeni
+*/
+.main-content {
+    flex: 1;
+    background-color: mistyrose;
+}
+
+/*MENU START*/
+/*Kolor logotypu i przycisku rozwijającego menu*/
+.logo,
+#toggle-icon {
+    color: #ffc107;
+}
+/*Ustawienia dla responsywnego menu*/
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: mistyrose;
+}
+/*Elementy menu domyślnie są ukryte*/
+.menu-item
+{
+    width: 100%;
+    padding: 16px;
+    border-bottom: 1px #6d6d6d solid;
+    text-align: center;
+    display: none;
+}
+
+
+
+/*Po wciśnięciu przycisku elementy będą widoczne*/
+.expanded > .menu-item {
+    display: block;
+}
+/*padding dla elementów menu*/
+.menu-logo-container,
+.menu-login-container,
+.menu-toggle {
+    display: block;
+    padding: 16px 32px;
+    font-size: 20px;
+
+}
+
+/*Office START*/
+.office {
+
+    padding: 3rem;
+    text-align: center;
+}
+.office-header {
+    font-size: 1.5rem;
+    margin: 0.2rem 0;
+}
+.office-description {
+    font-size: 0.7rem;
+}
+/*Office END*/
+
+/*MENU END*/
+
+/*FOOTER START*/
+/*Wyśrodkowanie stopki*/
+.footer {
+    font-size: 80%;
+    padding: 8px;
+    text-align: center;
+    color: mistyrose;
+}
+/*FOOTER END*/
+
+/*Listing START*/
+/*Nagłówek*/
+.list-heading,
+.list-description {
+    text-align: center;
+    margin: 16px 0;
+}
+/*Usunięcie dekoracji elementów listy (kropki na początku)*/
+.free-therms-list {
+    list-style-type: none;
+}
+/*Margines i ramka wokół pojedynczego newsa*/
+.free-therms-list-item {
+    margin-bottom: 16px;
+    display: flex;
+    border: 1px #6d6d6d solid;
+}
+/*Plakat - usuniecie paddingu*/
+.free-therms-list-item-poster {
+    display: block;
+    max-width: 200px;
+}
+/*Karta newsa*/
+.free-therms-list-item-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+}
+.free-therms-list-item-content > * {
+    margin: 8px 0;
+}
+.free-therms-list-item-title {
+    font-size: 1.6rem;
+}
+.free-therms-list-item-rating {
+    font-size: 1.6rem;
+}
+/*Listing END*/
+
+
+
+
+/*Responsive*/
+@media only screen and (min-width: 992px) {
+    /*Na ekranie powyżej 992px ukrywamy przycisk do rozwijania menu*/
+    .menu-toggle {
+        display: none;
+    }
+
+    /*Elementy menu nie powinny już zajmować całej szerokości, tylko być obok siebie*/
+    .menu-item {
+        display: block;
+        width: auto;
+        border-bottom: 0;
+    }
+    .menu-logo-container{
+        flex: 1;
+    }
+
+
+    /*Na dużym ekranie ograniczamy szerokość do 960px*/
+    .main-content,
+    .menu {
+        align-self: center;
+        width: 960px;
+    }
+
+
+
+    /*meeting.html*/
+    /*Informacje o spotkaniu w jednym rzędzie z odstępem */
+    .meeting-summary {
+        display: flex;
+        margin-top: 32px;
+    }
+    /*Mniejsza okładka na małych ekranach*/
+    .meeting-summary-cover {
+        object-fit: contain;
+        max-width: 200px;
+    }
+    /*Odstęp informacji o spotkaniu od okładki*/
+    .meeting-summary-info {
+        margin-left: 32px;
+    }
+    /*Dzień spotkania w kolorze wybanym przez Żonę i odstęp pod nim*/
+    .meeting-summary-day {
+        color: #e71c1c;
+        margin-bottom: 16px;
+    }
+    /*Odstępy między poszczególnymi informacjami*/
+    .meeting-summary-item {
+        margin: 32px 8px;
+    }
+
+    /*meeting.html END*/
+
+}
