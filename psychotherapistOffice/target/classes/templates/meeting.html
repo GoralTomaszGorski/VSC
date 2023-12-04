@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <!-- Dodana przestrzeń nazw th -->
-<html lang="pl" xmlns:th="https://www.thymeleaf.org">
+<html lang="pl"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">>
 <head>
     <meta charset="UTF-8">
-    <title>Wizyta Psychoterapia Ewa Górska</title>
+    <title th:text="|${meeting.dayof} Wizyta - Psychoterapia Ewa Górska|">Wizyta-Psychoterapia Ewa Górska</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
           integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -18,9 +21,50 @@
 
 <body>
 <div class="container">
-    <ul class="menu">
+    <main class="main-content" layout:fragment="content">
+        <section class="meeting">
+            <!-- Podsumowanie -->
+            <div class="meeting-summary">
+                <!-- Plakat -->
+                <p alt="termin-spotkania"
+                   class="meeting-summary-icon" >
+                   <i class="fa-solid fa-notes-medical"></i>
+                </p>
+
+                <!-- informacje o spotkaniu -->
+                <div class="meeting-summary-info">
+                    <!-- ustawiamy podsatwowe informacje o spotkaniu -->
+                    <h1 class="meeting-summary" th:text="${meeting.patient}">Nick Pacjęta</h1>
+                    <p class="meeting-summary-day" th:text="|dzień spotkania: ${meeting.dayof}|">Dzień Spotkania</p>
+                    <p class="meeting-summary-item" th:text="|Godzina: ${meeting.time}|">Godzina</p>
+                    <p class="meeting-summary-item">
+                        <a href="/offer"
+                           th:text="|Rzodzaj terapii: ${meeting.therapy}|">Rodzaj terapii: Indywidaulna</a>
+                    </p>
+                    <p class="meeting-summary-item" >
+                        Wypełnij formularz, wyślij prośbę o rezerawcję terminu. Terapeuta skontaktuje się z Tobą telefonicznie potwierdzi rezerwacje lub zaproponuje inny termin.
+                    </p>
+                </div>
+            </div>
+            <form action="#" class="meeting-form">
+                <!-- Identyfikator filmu, na który głosujemy-->
+                <p>Twoja ocena</p>
+                <input type="hidden" name="calenderId">
+                <div class="calender-buttons">
+                    <button class="calender-buttons"><i class="fa-solid fa-star"></i></button>
+                    <button class="calender-buttons"><i class="fa-solid fa-star"></i></button>
+                    <button class="calender-buttons"><i class="fa-solid fa-star"></i></button>
+                    <button class="calender-buttons"><i class="fa-solid fa-star"></i></button>
+                    <button class="calender-buttons"><i class="fa-regular fa-star"></i></button>
+                </div>
+            </form>
+            <p><a href="#">Zaloguj się</a>, aby oddać głos</p>
+        </section>
+    </main>
+</div>
+    <<!--ul class="menu">
         <li class="menu-logo-container">
-            <!-- Dynamicznie budowany adres do strony głównej -->
+            &lt;!&ndash; Dynamicznie budowany adres do strony głównej &ndash;&gt;
 
             <a href="#" th:href="@{/}">
                 <i class="fa-regular fa-compass"></i> Wizyta</a>
@@ -45,11 +89,11 @@
                 <i class="fa-regular fa-compass"></i> Zaloguj sie
             </a>
         </li>
-    </ul>
+    </ul>-->
 
 
 
-    <header class="office">
+<!--    <header class="office">
         <h1 class="office-header">GABINET PSYCHOTERAPEUTYCZNY</h1>
         <h2>Ewa Górska</h2>
         <p>
@@ -60,45 +104,14 @@
     </header>
 
     <main class="main-content">
-        <section class="meeting">
-            <!-- Podsumowanie -->
-            <div class="meeting-summary">
-                <!-- Plakat -->
-                <img src="../static/images/gory2.jpg"
-                     alt="termin-spotkania"
-                     class="meeting-summary-cover"
-                />
-                <!-- informacje o spotkaniu -->
-                <div class="meeting-summary-info">
-                    <h1 class="meeting-summary">Nick Pacjęta</h1>
-                    <p class="meeting-summary-day">Dzień Spotkania</p>
-                    <p class="meeting-summary-item">Godzina</p>
-                    <p class="meeting-summary-item">Rodzaj terapii: <a href="#">Indywidaulna</a> </p>
-                    <p class="meeting-summary-item" >
-                        Wypełnij formularz, wyślij prośbę o rezerawcję terminu. Terapeuta skontaktuje się z Tobą telefonicznie potwierdzi rezerwacje lub zaproponuje inny termin.
-                    </p>
-                </div>
-            </div>
-            <form action="#" class="meeting-form">
-                <!-- Identyfikator filmu, na który głosujemy-->
-                <p>Twoja ocena</p>
-                <input type="hidden" name="calenderId">
-                <div class="calender-buttons">
-                    <button class="calender-buttons"><i class="fa-solid fa-star"></i></button>
-                    <button class="calender-buttons"><i class="fa-solid fa-star"></i></button>
-                    <button class="calender-buttons"><i class="fa-solid fa-star"></i></button>
-                    <button class="calender-buttons"><i class="fa-solid fa-star"></i></button>
-                    <button class="calender-buttons"><i class="fa-regular fa-star"></i></button>
-                </div>
-            </form>
-            <p><a href="#">Zaloguj się</a>, aby oddać głos</p>
-        </section>
+
     </main>
 
     <footer class="footer">
         <p><i class="fa-regular fa-heart"></i> Psychoterapia: Ewa Górska (+48) 781 106 026 </p>
         <p> <i class="fa-solid fa-file-code"></i>  Api wykonał: tomasz.gorski88@gamil.com</p>
     </footer>
-</div>
+</div>-->
+
 </body>
 </html>

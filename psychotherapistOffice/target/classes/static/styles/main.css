@@ -9,12 +9,12 @@
 body {
     font-family: 'Montserrat';
     background-image: url("../images/gory2.jpg");
-    background-position: center;
+    background-position: top;
 }
 /*Ustawienie koloru odnośników i usunięcie podkreśleń*/
 a {
     text-decoration: none;
-    color: black;
+    color: darkblue;
 }
 /*Kolor tła w głównym kontenerze i ustawienie elastycznego rozkładu
 Elementy będą ustawiane jeden pod drugim
@@ -39,7 +39,7 @@ i powinna zajmować większość dostępnej przestrzeni
 /*Kolor logotypu i przycisku rozwijającego menu*/
 .logo,
 #toggle-icon {
-    color: #ffc107;
+    color: darkblue;
 }
 /*Ustawienia dla responsywnego menu*/
 .menu {
@@ -49,8 +49,7 @@ i powinna zajmować większość dostępnej przestrzeni
     background: mistyrose;
 }
 /*Elementy menu domyślnie są ukryte*/
-.menu-item
-{
+.menu-item{
     width: 100%;
     padding: 16px;
     border-bottom: 1px #6d6d6d solid;
@@ -101,7 +100,7 @@ i powinna zajmować większość dostępnej przestrzeni
 }
 /*FOOTER END*/
 
-/*Listing START*/
+/*index START*/
 /*Nagłówek*/
 .list-heading,
 .list-description {
@@ -114,32 +113,46 @@ i powinna zajmować większość dostępnej przestrzeni
 }
 /*Margines i ramka wokół pojedynczego newsa*/
 .free-therms-list-item {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     display: flex;
     border: 1px #6d6d6d solid;
 }
 /*Plakat - usuniecie paddingu*/
 .free-therms-list-item-poster {
     display: block;
-    max-width: 200px;
+    object-fit: contain;
+    max-width: 100px;
+    max-height: 100px;
+    font-size: 0.8rem;
+
 }
-/*Karta newsa*/
+/*Karta terminu*/
+
+.meeting-button{
+    display: block;
+    padding: 14px 24px;
+    font-size: 28px;
+    color: darkgreen;
+    text-align: center;
+
+}
+
 .free-therms-list-item-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 16px;
+    padding: 4px;
 }
 .free-therms-list-item-content > * {
-    margin: 8px 0;
+    margin: 4px 0;
 }
 .free-therms-list-item-title {
-    font-size: 1.6rem;
+    font-size: 1.0rem;
 }
 .free-therms-list-item-rating {
-    font-size: 1.6rem;
+    font-size: 0.6rem;
 }
-/*Listing END*/
+/*index END*/
 
 
 
@@ -172,30 +185,62 @@ i powinna zajmować większość dostępnej przestrzeni
 
 
     /*meeting.html*/
+    /*offer.html*/
+
     /*Informacje o spotkaniu w jednym rzędzie z odstępem */
-    .meeting-summary {
-        display: flex;
-        margin-top: 32px;
+    .meeting{
     }
-    /*Mniejsza okładka na małych ekranach*/
-    .meeting-summary-cover {
+
+
+    .meeting-summary
+    .therapy-summary{
+        display: flex;
+        margin-top: 16px;
+    }
+    /*Mniejsza ikona na małych ekranach*/
+    .meeting-summary-icon {
         object-fit: contain;
         max-width: 200px;
+        font-size: 4rem;
+        display: block;
+        padding: 14px 24px;
+        color: darkgreen;
+
     }
     /*Odstęp informacji o spotkaniu od okładki*/
-    .meeting-summary-info {
-        margin-left: 32px;
+    .meeting-summary-info
+    .therapy-summary-info{
+        margin-left: 8px;
     }
     /*Dzień spotkania w kolorze wybanym przez Żonę i odstęp pod nim*/
-    .meeting-summary-day {
-        color: #e71c1c;
-        margin-bottom: 16px;
+    .meeting-summary-day
+    .therapy-summary-item{
+        margin-bottom: 8px;
     }
     /*Odstępy między poszczególnymi informacjami*/
     .meeting-summary-item {
-        margin: 32px 8px;
+        margin: 8px;
     }
 
     /*meeting.html END*/
+
+
+    /*error pages START*/
+    .error-container {
+        margin: 32px auto;
+    }
+    .error-container > * {
+        display: block;
+        text-align: center;
+    }
+    .error-header,
+    .error-icon {
+        font-size: 4rem;
+        margin: 16px 0;
+    }
+    /*error pages END*/
+
+
+
 
 }

@@ -5,6 +5,7 @@ import goral.psychotherapistoffice.domain.calender.dto.CalenderDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CalenderService {
@@ -17,5 +18,9 @@ public class CalenderService {
     public List<CalenderDto>findAllFreeTherms(){
         return calenderRepository.findAllByFreeIsTrue().stream()
                 .map(CalenderDtoMapper::map).toList();
+    }
+
+    public Optional<CalenderDto>findThermById(long id){
+        return calenderRepository.findById(id).map(CalenderDtoMapper::map);
     }
 }

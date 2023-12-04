@@ -21,6 +21,7 @@ public class HomeController {
     public String home(Model model){
         List<CalenderDto>freeTherms = calenderService.findAllFreeTherms();
         model.addAttribute("heading", "Wolne Terminy");
+        model.addAttribute("description", "Wybierz odpwiedni dla Ciebie termin i zarezerwój wizytę");
         model.addAttribute("therms", freeTherms);
         return "index";
     }
