@@ -19,7 +19,7 @@ public class TherapyController {
         this.therapyService = therapyService;
     }
 
-    @GetMapping("/offer")
+    @GetMapping("/offerta")
     public String offers(Model model){
         List<TherapyDto> kindOfTherapies = therapyService.findAllTherapies();
         model.addAttribute("therapyHeading", "Wybierz terapię która Cię interesuje");
@@ -27,7 +27,7 @@ public class TherapyController {
         return "offer";
     }
 
-    @GetMapping("/offer/{id}")
+    @GetMapping("/offerta/{id}")
     public String getTherapy(@PathVariable long id, Model model){
         TherapyDto therapyDto = therapyService.findTherapyById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));

@@ -25,7 +25,7 @@
     <main class="main-content" layout:fragment="content">
         <!-- Nagłówek pobieramy z modelu -->
         <h2 class="list-heading" th:text="${heading}">Wyświetla wolne terminy w pętli thymeleaf'a</h2>
-        <!-- godine pobieramy z modelu -->
+        <!-- godzine pobieramy z modelu -->
         <p class="list-description" th:text="${description}">opis, że trzeba kliknąc żeby się zapisać</p>
         <!-- Zostawiamy tylko pierwszy element <li> -->
         <ul class="free-therms-list" th:remove="all-but-first">

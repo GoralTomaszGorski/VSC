@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
           integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
           crossorigin="anonymous"
-          referrerpolicy="no-referrer" />
+          referrerpolicy="no-referrer"/>
 
     <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;400&display=swap" rel="stylesheet">
     <!-- Dynamicznie budowany adres do skryptu JS i arkusza stylów -->
@@ -22,32 +22,33 @@
 <body>
 <div class="container">
     <main class="main-content" layout:fragment="content">
-        <h2 class="therapy-summary" th:text="${therapyHeading}">Rodzaje terapii/zakres usług</h2>
-
+        <section class="therapy">
+            <h2 class="list-heading" th:text="${therapyHeading}">Rodzaje terapii/zakres usług</h2>
 
             <!-- Podsumowanie -->
             <div class="therapy-summary">
                 <!-- ikonka/obrazek -->
-                <p class="meeting-summary-icon" >
-                    <i class="fa-solid fa-notes-medical"></i>
-                </p>
+
                 <!-- informacje o terapii -->
                 <div class="therapy-summary-info">
-                    <!-- ustawiamy podsatwowe informacje o terapii -->
-                    <ul class="free-therms-list-item" th:each="therapy: ${therapies}">
 
-                        <!-- Link do strony pojedynczego termiu  /termin/5 -->
-                        <a href="#" th:href="@{|/offer/${therapy.id}|}">
-                        </a>
+                    <h1 class="therapy-summary"></h1>
+                    <ul class="therapy-therms-list" th:remove="all-but-first">
+                        <!-- ustawiamy podsatwowe informacje o terapii -->
+                        <li class="therapy-list-item" th:each="therapy: ${therapies}">
+                            <fieldset>
+
+                                <!-- ustawiamy podsatwowe informacje o terapii -->
+                                <h3 class="meeting-summary" th:text="${therapy.kindOfTherapy}">Rodzaj terapii</h3>
+                                <p class="meeting-summary-day" th:text="|${therapy.description}|">opis</p>
+                                <p class="meeting-summary-day" th:text="|cena: ${therapy.price} zł|">cena</p>
+
+                            </fieldset>
+                        </li>
                     </ul>
-
-                    <p class="therapy-summary-item" >
-                        Wypełnij formularz, wyślij prośbę o rezerawcję terminu. Terapeuta skontaktuje się z Tobą telefonicznie potwierdzi rezerwacje lub zaproponuje inny termin.
-                    </p>
                 </div>
             </div>
-
-
+        </section>
     </main>
 </div>
 </body>

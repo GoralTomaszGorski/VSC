@@ -108,7 +108,8 @@ i powinna zajmować większość dostępnej przestrzeni
     margin: 16px 0;
 }
 /*Usunięcie dekoracji elementów listy (kropki na początku)*/
-.free-therms-list {
+.free-therms-list,
+.therapy-therms-list{
     list-style-type: none;
 }
 /*Margines i ramka wokół pojedynczego newsa*/
@@ -129,7 +130,7 @@ i powinna zajmować większość dostępnej przestrzeni
 /*Karta terminu*/
 
 .meeting-button{
-    display: block;
+        display: block;
     padding: 14px 24px;
     font-size: 28px;
     color: darkgreen;
@@ -188,11 +189,12 @@ i powinna zajmować większość dostępnej przestrzeni
     /*offer.html*/
 
     /*Informacje o spotkaniu w jednym rzędzie z odstępem */
-    .meeting{
+    .meeting,
+    .therapy{
     }
 
 
-    .meeting-summary
+    .meeting-summary,
     .therapy-summary{
         display: flex;
         margin-top: 16px;
@@ -208,13 +210,13 @@ i powinna zajmować większość dostępnej przestrzeni
 
     }
     /*Odstęp informacji o spotkaniu od okładki*/
-    .meeting-summary-info
+    .meeting-summary-info,
     .therapy-summary-info{
         margin-left: 8px;
     }
     /*Dzień spotkania w kolorze wybanym przez Żonę i odstęp pod nim*/
     .meeting-summary-day
-    .therapy-summary-item{
+    {
         margin-bottom: 8px;
     }
     /*Odstępy między poszczególnymi informacjami*/
@@ -222,6 +224,16 @@ i powinna zajmować większość dostępnej przestrzeni
         margin: 8px;
     }
 
+    .therapy123{
+        margin-bottom: 10px;
+        display: flex;
+        border: 1px #6d6d6d solid;
+        display: block;
+        padding: 14px 24px;
+        font-size: 28px;
+        color: darkgreen;
+        text-align: center;
+    }
     /*meeting.html END*/
 
 

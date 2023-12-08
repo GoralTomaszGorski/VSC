@@ -38,8 +38,8 @@
                     <p class="meeting-summary-day" th:text="|dzień spotkania: ${meeting.dayof}|">Dzień Spotkania</p>
                     <p class="meeting-summary-item" th:text="|Godzina: ${meeting.time}|">Godzina</p>
                     <p class="meeting-summary-item">
-                        <a href="/offer"
-                           th:text="|Rzodzaj terapii: ${meeting.therapy}|">Rodzaj terapii: Indywidaulna</a>
+                        <a href="/offerta"
+                           th:text="|Rzodzaj terapii: ${meeting.getTherapy()}|">Rodzaj terapii: Indywidaulna</a>
                     </p>
                     <p class="meeting-summary-item" >
                         Wypełnij formularz, wyślij prośbę o rezerawcję terminu. Terapeuta skontaktuje się z Tobą telefonicznie potwierdzi rezerwacje lub zaproponuje inny termin.
