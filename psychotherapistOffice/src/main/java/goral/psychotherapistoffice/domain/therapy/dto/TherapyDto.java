@@ -17,6 +17,9 @@ public class TherapyDto {
         this.price = price;
     }
 
+    public TherapyDto() {
+    }
+
     public Long getId() {
         return id;
     }

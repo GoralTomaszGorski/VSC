@@ -28,11 +28,12 @@ public class TherapyController {
     }
 
     @GetMapping("/offerta/{id}")
-    public String getTherapy(@PathVariable long id, Model model){
+    public String getTherapy(@PathVariable long id, Model model) {
         TherapyDto therapyDto = therapyService.findTherapyById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-        model.addAttribute("therapy", therapyDto);
-        return "offer";
+        model.addAttribute("therapyId", therapyDto);
+        return "offerId";
     }
+
 
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Dodana przestrzeń nazw th -->
+<html lang="pl"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">>
+<head>
+    <meta charset="UTF-8">
+    <title>Strona Administratora - Psychoterapia Ewa Górska</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Dynamicznie budowany adres do skryptu JS i arkusza stylów -->
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
+    <link rel="stylesheet" href="../static/styles/main.css" th:href="@{/styles/main.css}">
+</head>
+
+<body>
+<main class="main-content" layout:fragment="content">
+    <p class="notification-bar" th:if="${notification}" th:text="${notification}">
+        Belka z powiadomieniami
+    <h2 class="list-heading">Panel administracyjny</h2>
+    <ul class="list-border">
+        <li><a href="#" th:href="@{/admin/dodaj-pacjęta}">Dodaj pacjęta</a></li>
+        <li><a href="#" th:href="@{/admin/dodaj-terapię}">Dodaj rodzaj terapii</a></li>
+        <li><a href="#" th:href="@{/admin/pacjęci}">Wyświetl pacjętów</a></li>
+
+    </ul>
+</main>
+
+</body>
+</html>

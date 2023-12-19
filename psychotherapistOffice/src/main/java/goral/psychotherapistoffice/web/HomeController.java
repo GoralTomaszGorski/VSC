@@ -25,4 +25,14 @@ public class HomeController {
         model.addAttribute("therms", freeTherms);
         return "index";
     }
+
+    @GetMapping("/terminy")
+    public String therms(Model model){
+        List<CalenderDto>allTherms = calenderService.findAllTherms();
+        model.addAttribute("headingAllTherm", "Kalendarz spotkań");
+        model.addAttribute("descriptionAllTherms", "Wszystkie spotkania oraz wolne terminy - czas pracy gabinetu");
+        model.addAttribute("alltherms", allTherms);
+        return "therms";
+    }
+
 }

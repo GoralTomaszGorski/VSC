@@ -20,7 +20,16 @@ public class CalenderService {
                 .map(CalenderDtoMapper::map).toList();
     }
 
+
+    public List<CalenderDto>findAllTherms(){
+        return calenderRepository.findAll()
+                .stream()
+                .map(CalenderDtoMapper::map).toList();
+    }
+
     public Optional<CalenderDto>findThermById(long id){
         return calenderRepository.findById(id).map(CalenderDtoMapper::map);
     }
+
+
 }

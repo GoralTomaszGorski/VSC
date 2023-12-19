@@ -3,9 +3,8 @@ package goral.psychotherapistoffice.domain.therapy;
 
 import goral.psychotherapistoffice.domain.therapy.dto.TherapyDto;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -27,6 +26,13 @@ public class TherapyService {
         return therapyRepository.findById(id).map(TherapyDtoMapper::map);
     }
 
-
+    @Transactional
+    public void addTherapy(TherapyDto therapyDto){
+        Therapy therapyToSave = new Therapy();
+        therapyToSave.setKindOfTherapy(therapyDto.getKindOfTherapy());
+        therapyToSave.setDescription(therapyDto.getDescription());
+        therapyToSave.setPrice(therapyDto.getPrice());
+        therapyRepository.save(therapyToSave);
+    }
 
 }

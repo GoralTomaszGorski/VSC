@@ -7,5 +7,7 @@ import java.util.List;
 public interface CalenderRepository extends CrudRepository <Calender, Long>{
     List<Calender> findAllByFreeIsTrue();
 
+    List<Calender> findAll();
+
 
 }

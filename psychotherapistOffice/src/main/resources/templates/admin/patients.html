@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Dodana przestrzeń nazw th -->
+<html lang="pl"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">>
+<head>
+    <meta charset="UTF-8">
+    <!--/*@thymesVar id="kindOfTherapy" type="java.lang.String"*/-->
+    <title>Wszyscy Pacjęci - Psychoterapia Ewa Górska</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"/>
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Dynamicznie budowany adres do skryptu JS i arkusza stylów -->
+    <script defer src="../../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
+    <link rel="stylesheet" href="../../static/styles/main.css" th:href="@{/styles/main.css}">
+</head>
+
+
+<body>
+<div class="container">
+    <main class="main-content" layout:fragment="content">
+        <section class="patient">
+            <h2 class="list-heading" th:text="${patientHeading}">Pacjęci</h2>
+
+            <!-- Podsumowanie -->
+            <div class="patient-summary">
+
+
+                <!-- informacje o terapii -->
+                <div class="patient-summary-info">
+
+                    <h1 class="patient-summary"></h1>
+                    <ul class="patients-list" th:remove="all-but-first">
+                        <!-- ustawiamy podsatwowe informacje o terapii -->
+                        <li class="therapy-list-item" th:each="patient: ${patients}">
+                            <fieldset>
+
+                                <!-- ustawiamy podsatwowe informacje o terapii -->
+                                <h3 class="meeting-summary" th:text="|Nick pacjęta: ${patient.nick}|">Nick pacjęta</h3>
+                                <p class="meeting-summary-day" th:text="|Numer porządkowy (id): ${patient.id}|">Numer porządkowy (id)</p>
+                                <p class="meeting-summary-day" th:text="|Imię: ${patient.name}|">Imię</p>
+                                <p class="meeting-summary-day" th:text="|Nazwisko: ${patient.surname}|">Nazwisko</p>
+                                <p class="meeting-summary-day" th:text="|Telefon: ${patient.telephone}|">Telefon</p>
+                                <p class="meeting-summary-day" th:text="|Wiek: ${patient.age}|">Wiek</p>
+
+                            </fieldset>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>

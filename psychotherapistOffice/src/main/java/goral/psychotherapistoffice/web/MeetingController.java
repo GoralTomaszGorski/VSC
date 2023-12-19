@@ -2,6 +2,7 @@ package goral.psychotherapistoffice.web;
 
 import goral.psychotherapistoffice.domain.calender.CalenderService;
 import goral.psychotherapistoffice.domain.calender.dto.CalenderDto;
+import goral.psychotherapistoffice.domain.therapy.dto.TherapyDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,4 +28,6 @@ public class MeetingController {
         return "meeting";
 
     }
+
+
 }

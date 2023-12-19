@@ -69,7 +69,7 @@ i powinna zajmować większość dostępnej przestrzeni
 .menu-toggle {
     display: block;
     padding: 16px 32px;
-    font-size: 20px;
+    font-size: 17px;
 
 }
 
@@ -106,10 +106,13 @@ i powinna zajmować większość dostępnej przestrzeni
 .list-description {
     text-align: center;
     margin: 16px 0;
+
 }
 /*Usunięcie dekoracji elementów listy (kropki na początku)*/
 .free-therms-list,
-.therapy-therms-list{
+.therapy-therms-list,
+.patients-list,
+.list-border{
     list-style-type: none;
 }
 /*Margines i ramka wokół pojedynczego newsa*/
@@ -190,12 +193,14 @@ i powinna zajmować większość dostępnej przestrzeni
 
     /*Informacje o spotkaniu w jednym rzędzie z odstępem */
     .meeting,
-    .therapy{
+    .therapy,
+    .patient{
     }
 
 
     .meeting-summary,
-    .therapy-summary{
+    .therapy-summary,
+    .patient-summary{
         display: flex;
         margin-top: 16px;
     }
@@ -211,7 +216,8 @@ i powinna zajmować większość dostępnej przestrzeni
     }
     /*Odstęp informacji o spotkaniu od okładki*/
     .meeting-summary-info,
-    .therapy-summary-info{
+    .therapy-summary-info,
+    .patient-summary-info{
         margin-left: 8px;
     }
     /*Dzień spotkania w kolorze wybanym przez Żonę i odstęp pod nim*/
@@ -254,5 +260,42 @@ i powinna zajmować większość dostępnej przestrzeni
 
 
 
+
+    /*formularze*/
+    /*textarea domyślnie nie dziedziczy czcionki z body*/
+    .textarea {
+        font-family: inherit;
+    }
+    /*etykiety i inputy jeden pod drugim z odstępami po bokach*/
+    .mc-form {
+        display: flex;
+        flex-direction: column;
+        margin: 0 32px;
+    }
+    /*odstępy między etykietami i inputami*/
+    .mc-form > * {
+        margin-top: 8px;
+    }
+    /*większe inputy z paddingami*/
+    .mc-form > input,
+    .mc-form > textarea,
+    .mc-form > button {
+        font-size: 1.2rem;
+        color: black;
+        padding: 8px;
+    }
+    .mc-form > button {
+        margin-top: 16px;
+        background-color: white;
+        color: #ffc107;
+        border: none;
+    }
+
+    /*panel admina belka z powiadomniniami*/
+    .notification-bar {
+        text-align: center;
+        background-color: #ffc107;
+        padding: 8px 0;
+    }
 
 }
