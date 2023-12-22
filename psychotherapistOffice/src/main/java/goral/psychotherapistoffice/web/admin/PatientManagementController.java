@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -43,6 +44,7 @@ public class PatientManagementController {
         );
         return "redirect:/admin";
     }
+    Date now = new Date();
 
     @GetMapping("/admin/pacjęci")
     public String patients(Model model){

@@ -16,7 +16,7 @@ public class Patient {
     private String name;
     private String surname;
     private String telephone;
-    private int age;
+    private int yearOfBrith;
 
 
 
@@ -60,12 +60,12 @@ public class Patient {
         this.telephone = telephone;
     }
 
-    public int getAge() {
-        return age;
+    public int getYearOfBrith() {
+        return yearOfBrith;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setYearOfBrith(int yearOfBrith) {
+        this.yearOfBrith = yearOfBrith;
     }
 
     @Override
@@ -76,7 +76,7 @@ public class Patient {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", telephone='" + telephone + '\'' +
-                ", age=" + age +
+                ", yearOfBrith=" + yearOfBrith +
                 '}';
     }
 }

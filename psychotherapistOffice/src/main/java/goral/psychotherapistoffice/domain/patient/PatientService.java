@@ -25,6 +25,9 @@ public class PatientService {
                 .map(PatientDtoMapper::map).toList();
     }
 
+
+
+
     @Transactional
     public void addPatient(PatientDto patientDto){
         Patient patientToSave = new Patient();
@@ -32,7 +35,7 @@ public class PatientService {
         patientToSave.setName(patientDto.getName());
         patientToSave.setSurname(patientDto.getSurname());
         patientToSave.setTelephone(patientDto.getTelephone());
-        patientToSave.setAge(patientDto.getAge());
+        patientToSave.setYearOfBrith(patientDto.getYearOfBrith());
         patientRepository.save(patientToSave);
     }
 

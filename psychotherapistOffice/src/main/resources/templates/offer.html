@@ -6,7 +6,7 @@
       layout:decorate="~{layout}">>
 <head>
     <meta charset="UTF-8">
-    <title>Oferta -Psychoterapia Ewa Górska</title>
+    <title>Oferta - Psychoterapia Ewa Górska</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
           integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -32,10 +32,9 @@
                 <!-- informacje o terapii -->
                 <div class="therapy-summary-info">
 
-                    <h1 class="therapy-summary"></h1>
                     <ul class="therapy-therms-list" th:remove="all-but-first">
                         <!-- ustawiamy podsatwowe informacje o terapii -->
-                        <li class="therapy-list-item" th:each="therapy: ${therapies}">
+                        <li th:each="therapy: ${therapies}">
                             <fieldset>
 
                                 <!-- ustawiamy podsatwowe informacje o terapii -->

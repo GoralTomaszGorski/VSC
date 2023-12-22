@@ -6,16 +6,16 @@ public class PatientDto {
     private String name;
     private String surname;
     private String telephone;
-    private int age;
+    private int yearOfBrith;
 
 
-    public PatientDto(Long id, String nick, String name, String surname, String telephone, int age) {
+    public PatientDto(Long id, String nick, String name, String surname, String telephone, int yearOfBrith) {
         this.id = id;
         this.nick = nick;
         this.name = name;
         this.surname = surname;
         this.telephone = telephone;
-        this.age = age;
+        this.yearOfBrith = yearOfBrith;
     }
 
     public PatientDto() {
@@ -61,11 +61,11 @@ public class PatientDto {
         this.telephone = telephone;
     }
 
-    public int getAge() {
-        return age;
+    public int getYearOfBrith() {
+        return yearOfBrith;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setYearOfBrith(int yearOfBrith) {
+        this.yearOfBrith = yearOfBrith;
     }
 }

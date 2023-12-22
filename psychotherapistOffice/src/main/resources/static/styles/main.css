@@ -111,14 +111,37 @@ i powinna zajmować większość dostępnej przestrzeni
 /*Usunięcie dekoracji elementów listy (kropki na początku)*/
 .free-therms-list,
 .therapy-therms-list,
-.patients-list,
-.list-border{
+.list-border,
+.patients-list
+{
     list-style-type: none;
 }
-/*Margines i ramka wokół pojedynczego newsa*/
-.free-therms-list-item {
-    margin-bottom: 10px;
+
+/*Usunięcie dekoracji elementów listy (kropki na początku)*/
+.patients-list123 {
+    list-style-type: none;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px;
+
+
+
+}
+
+
+/*Margines i ramka wokół pojedynczego newsa*/
+.free-therms-list-item{
+    margin-bottom: 10px;
+    max-width: 930px;
+    display: flex;
+    border: 1px #6d6d6d solid;
+}
+
+.patients-list-item{
+    margin-bottom: 10px;
+    max-width: 930px;
+    display: block;
     border: 1px #6d6d6d solid;
 }
 /*Plakat - usuniecie paddingu*/
@@ -141,13 +164,13 @@ i powinna zajmować większość dostępnej przestrzeni
 
 }
 
-.free-therms-list-item-card {
+.free-therms-list-item-card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 4px;
 }
-.free-therms-list-item-content > * {
+.free-therms-list-item-content {
     margin: 4px 0;
 }
 .free-therms-list-item-title {
@@ -199,11 +222,18 @@ i powinna zajmować większość dostępnej przestrzeni
 
 
     .meeting-summary,
-    .therapy-summary,
-    .patient-summary{
+    .therapy-summary{
         display: flex;
         margin-top: 16px;
+
     }
+    .patient-summary{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
     /*Mniejsza ikona na małych ekranach*/
     .meeting-summary-icon {
         object-fit: contain;
@@ -221,9 +251,13 @@ i powinna zajmować większość dostępnej przestrzeni
         margin-left: 8px;
     }
     /*Dzień spotkania w kolorze wybanym przez Żonę i odstęp pod nim*/
-    .meeting-summary-day
-    {
+    .meeting-summary-day,
+    .patient-summary-day{
+        display: flex;
+        flex-direction: column;
         margin-bottom: 8px;
+
+
     }
     /*Odstępy między poszczególnymi informacjami*/
     .meeting-summary-item {
@@ -232,7 +266,6 @@ i powinna zajmować większość dostępnej przestrzeni
 
     .therapy123{
         margin-bottom: 10px;
-        display: flex;
         border: 1px #6d6d6d solid;
         display: block;
         padding: 14px 24px;
