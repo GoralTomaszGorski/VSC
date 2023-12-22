@@ -1,0 +1,15 @@
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/therapy/Therapy.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/therapy/TherapyDtoMapper.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/calender/CalenderDtoMapper.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/therapy/TherapyRepository.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/calender/dto/CalenderDto.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/web/MeetingController.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/web/TherapyController.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/therapy/TherapyService.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/calender/CalenderService.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/calender/CalenderRepository.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/therapy/dto/TherapyDto.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/PsychotherapistOfficeApplication.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/web/HomeController.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/calender/Calender.java
+/home/goral/java_gorskiego_LIS23/VSC/psychotherapistOffice/src/main/java/goral/psychotherapistoffice/domain/patient/Patient.java

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Dodana przestrzeń nazw th -->
+<html lang="pl"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">>
+<head>
+    <meta charset="UTF-8">
+    <title>Wszyscy Pacjęci - Psychoterapia Ewa Górska</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Dynamicznie budowany adres do skryptu JS i arkusza stylów -->
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
+    <link rel="stylesheet" href="../static/styles/main.css" th:href="@{/styles/main.css}">
+</head>
+
+<body>
+<div class="container">
+    <main class="main-content" layout:fragment="content">
+        <section class="patient">
+            <h2 class="list-heading" th:text="${patientHeading}">Pacjęci</h2>
+
+            <!-- Podsumowanie -->
+            <div class="patient-summary">
+                <!-- ikonka/obrazek -->
+
+                <!-- informacje o terapii -->
+                <div class="patient-summary">
+
+                    <ul class="patients-list" th:remove="all-but-first">
+                        <!-- ustawiamy podsatwowe informacje o terapii -->
+                        <li class="patients-list-item" th:each="patient: ${patients}">
+
+                                <!-- ustawiamy podsatwowe informacje o terapii -->
+                                <h3 th:text="|Nick pacjęta: ${patient.nick}|">Nick pacjęta</h3>
+                                <p th:text="|Lp. (id): ${patient.id}, Imię: ${patient.name}, Nazwisko: ${patient.surname}, Rok urodzenia: ${patient.yearOfBrith}|">Lp., Imię, Nazwisko, Wiek</p>
+                                <p th:text="|Telefon: ${patient.telephone}|">Telefon</p>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>
