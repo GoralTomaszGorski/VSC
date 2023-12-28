@@ -26,8 +26,6 @@ public class PatientService {
     }
 
 
-
-
     @Transactional
     public void addPatient(PatientDto patientDto){
         Patient patientToSave = new Patient();

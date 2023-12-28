@@ -1,6 +1,4 @@
 package goral.psychotherapistoffice.domain.calender;
-import goral.psychotherapistoffice.domain.patient.Patient;
-import goral.psychotherapistoffice.domain.therapy.Therapy;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,12 +9,23 @@ public class Calender {
     private String dayof;
     private String time;
     private boolean free;
-    @ManyToOne
-    @JoinColumn(name = "patient_id", referencedColumnName = "id")
-    private Patient patient;
-    @ManyToOne
-    @JoinColumn(name = "therapy_id", referencedColumnName = "id")
-    private Therapy therapy;
+
+
+    public Calender(Long id, String dayof, String time, boolean free) {
+        this.id = id;
+        this.dayof = dayof;
+        this.time = time;
+        this.free = free;
+    }
+
+    public Calender(boolean free) {
+
+        this.free = free;
+    }
+
+    public Calender() {
+
+    }
 
     public Long getId() {
         return id;
@@ -48,21 +57,5 @@ public class Calender {
 
     public void setFree(boolean free) {
         this.free = free;
-    }
-
-    public Patient getPatient() {
-        return patient;
-    }
-
-    public void setPatient(Patient patient) {
-        this.patient = patient;
-    }
-
-    public Therapy getTherapy() {
-        return therapy;
-    }
-
-    public void setTherapy(Therapy therapy) {
-        this.therapy = therapy;
     }
 }

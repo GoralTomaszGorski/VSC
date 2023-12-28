@@ -27,6 +27,8 @@ public class TherapyController {
         return "offer";
     }
 
+
+    /*popsułem nie działa do poprawy później*/
     @GetMapping("/offerta/{id}")
     public String getTherapy(@PathVariable long id, Model model) {
         TherapyDto therapyDto = therapyService.findTherapyById(id)

@@ -7,10 +7,7 @@ public class CalenderDtoMapper {
         return new CalenderDto(
                 calender.getId(),
                 calender.getDayof(),
-                calender.getTime(),
-                calender.isFree(),
-                calender.getPatient().getName(),
-                calender.getTherapy().getKindOfTherapy()
+                calender.getTime()
         );
     }
 

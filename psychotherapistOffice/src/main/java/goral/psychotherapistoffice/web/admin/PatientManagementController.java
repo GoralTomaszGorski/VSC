@@ -44,7 +44,6 @@ public class PatientManagementController {
         );
         return "redirect:/admin";
     }
-    Date now = new Date();
 
     @GetMapping("/admin/pacjęci")
     public String patients(Model model){

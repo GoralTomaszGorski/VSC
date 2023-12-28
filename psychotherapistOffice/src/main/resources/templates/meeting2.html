@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Dodana przestrzeń nazw th -->
+<html lang="pl"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">>
+<head>
+    <meta charset="UTF-8">
+    <title th:text="|${meeting.dayof} Wizyta - Psychoterapia Ewa Górska|">Wizyta-Psychoterapia Ewa Górska</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Dynamicznie budowany adres do skryptu JS i arkusza stylów -->
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
+    <link rel="stylesheet" href="../static/styles/main.css" th:href="@{/styles/main.css}">
+</head>
+
+<body>
+<div class="container">
+    <main class="main-content" layout:fragment="content">
+        <section class="meeting">
+            <!-- Podsumowanie -->
+            <div class="meeting-summary">
+                <!-- Plakat -->
+                <p alt="termin-spotkania"
+                   class="meeting-summary-icon">
+                    <i class="fa-solid fa-notes-medical"></i>
+                </p>
+
+                <!-- informacje o spotkaniu -->
+                <div class="meeting-summary-info">
+                    <!-- ustawiamy podsatwowe informacje o spotkaniu -->
+                    <h1 class="meeting-summary" th:text="${meeting2.patient}">Nick Pacjęta</h1>
+                    <p class="meeting-summary-day" th:text="|dzień spotkania: ${meeting2.dayof}|">Dzień Spotkania</p>
+                    <p class="meeting-summary-item" th:text="|Godzina: ${meeting.time}|">Godzina</p>
+                    <p class="meeting-summary-item">
+                        <a href="/offerta"
+                           th:text="|Rzodzaj terapii: ${meeting2.getTherapy()}|">Rodzaj terapii: Indywidaulna</a>
+                    </p>
+                    <p class="meeting-summary-item">
+                        Wypełnij formularz, wyślij prośbę o rezerawcję terminu. Terapeuta skontaktuje się z Tobą
+                        telefonicznie potwierdzi rezerwacje lub zaproponuje inny termin.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>
