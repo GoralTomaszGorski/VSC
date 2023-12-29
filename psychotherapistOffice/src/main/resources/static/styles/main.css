@@ -161,7 +161,6 @@ i powinna zajmować większość dostępnej przestrzeni
     font-size: 28px;
     color: darkgreen;
     text-align: center;
-
 }
 
 .free-therms-list-item-card{
@@ -329,6 +328,32 @@ i powinna zajmować większość dostępnej przestrzeni
         text-align: center;
         background-color: #ffc107;
         padding: 8px 0;
+    }
+
+    /*
+    przyciski dod sprawdzenia zarezerwowanych i wolnych terminów
+    */
+    .terms-booked-href,
+    .terms-free-href{
+        font-size: 14px;
+        align-items: center;
+    }
+
+    .meeting-button-free,
+    .meeting-button-booked{
+        display: block;
+        padding: 14px 24px;
+        font-size: 28px;
+        text-align: center;
+        align-items: center;
+
+
+    }
+    .meeting-button-free{
+        color: darkgreen;
+    }
+    .meeting-button-booked{
+        color: orangered;
     }
 
 }

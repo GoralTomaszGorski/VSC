@@ -15,10 +15,10 @@ public class CalenderService {
         this.calenderRepository = calenderRepository;
     }
 
-/*    public List<CalenderDto>findAllFreeTherms(){
-        return calenderRepository.findAllByFreeIsTrue().stream()
+    public List<CalenderDto>findAllFreeTherms(){
+        return calenderRepository.findAllByFreeIsFalse().stream()
                 .map(CalenderDtoMapper::map).toList();
-    }*/
+    }
 
 
     public List<CalenderDto>findAllTherms(){

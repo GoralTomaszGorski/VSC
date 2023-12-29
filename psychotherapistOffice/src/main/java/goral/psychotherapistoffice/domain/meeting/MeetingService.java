@@ -1,6 +1,7 @@
 package goral.psychotherapistoffice.domain.meeting;
 
 
+import goral.psychotherapistoffice.domain.meeting.dto.MeetingAdminDto;
 import goral.psychotherapistoffice.domain.meeting.dto.MeetingDto;
 import org.springframework.stereotype.Service;
 
@@ -25,8 +26,12 @@ public class MeetingService {
                 .toList();
     }
 
-    public Optional<MeetingDto>findMeetingById(Long id){
-        return meetingRepository.findById(id).map(MeetingDtoMapper::map);
+
+    public List<MeetingAdminDto>findAllMeetingsForAdmin(){
+        return meetingRepository.findAll()
+                .stream()
+                .map(MeetingAdminDtoMapper::map)
+                .toList();
     }
 
 

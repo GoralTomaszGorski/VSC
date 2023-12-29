@@ -21,8 +21,8 @@ public class HomeController {
     @GetMapping("/")
     public String therms(Model model){
         List<CalenderDto>allTherms = calenderService.findAllTherms();
-        model.addAttribute("headingAllTherm", "Kalendarz spotkań");
-        model.addAttribute("descriptionAllTherms", "Wszystkie spotkania - czas pracy gabinetu");
+        model.addAttribute("headingAllTherm", "Czas pracy gabinetu");
+        model.addAttribute("descriptionAllTherms", "Kalendarz spotkań i wolne terminy");
         model.addAttribute("alltherms", allTherms);
         return "index";
     }

@@ -15,6 +15,7 @@
         <h2 class="list-heading" th:text="${headingAllTherm}">Wyświetla wolne terminy w pętli thymeleaf'a</h2>
         <!-- godzine pobieramy z modelu -->
         <p class="list-description" th:text="${descriptionAllTherms}">opis, że trzeba kliknąc żeby się zapisać</p>
+
         <!-- Zostawiamy tylko pierwszy element <li> -->
         <ul class="free-therms-list" th:remove="all-but-first">
             <!-- Pętla po wszystkich terminach z modelu -->
@@ -34,9 +35,7 @@
                         <h3 class="free-therms-list-item-title">
                             <!-- Link do strony pojedynczego spotkania /termin/6 -->
                             <a href="#" th:href="@{|/termin/${calender.id}|}" th:text="${calender.dayof}">Dzień spotkania
-                                <img src="../static/images/sofa2.jpg"
-                                     alt="Kliknij i zarezerwój wizytę"
-                                     class="free-therms-list-item-poster">
+
                             </a>
                         </h3>
                         <p class="free-therms-list-item-title" th:text="${calender.time}">godzina</p>

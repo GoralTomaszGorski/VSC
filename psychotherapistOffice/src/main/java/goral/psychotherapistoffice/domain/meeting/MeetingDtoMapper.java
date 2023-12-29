@@ -7,7 +7,7 @@ public class MeetingDtoMapper {
 
         return new MeetingDto(
                 meeting.getId(),
-                meeting.getPatient().getName()+" "+meeting.getPatient().getSurname()+" Nick: "+meeting.getPatient().getNick(),
+                meeting.getPatient().getNick(),
                 meeting.getTherapy().getKindOfTherapy(),
                 meeting.getCalender().getDayof()+" "+meeting.getCalender().getTime()
         );

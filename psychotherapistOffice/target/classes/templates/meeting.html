@@ -12,16 +12,25 @@
         <h2 class="list-heading" th:text="${heading}">Wyświetla terminy w pętli thymeleaf'a</h2>
         <!-- godzine pobieramy z modelu -->
         <p class="list-description" th:text="${description}">Sprawdz terminy spotkań</p>
+
+        <a class="terms-free-href" href="/terminy">
+            <button class="meeting-button-free">
+                <i class="fa-regular fa-calendar-days"></i>
+            </button>
+            <p>sprawdź wolne terminy</p>
+        </a>
+
         <!-- Zostawiamy tylko pierwszy element <li> -->
         <ul class="free-therms-list" th:remove="all-but-first">
             <!-- Pętla po wszystkich terminach z modelu -->
-            <li class="free-therms-list-item" th:each="meeting: ${meetingThermsOccupied}">
+            <li class="free-therms-list-item" th:each="meetingsTherms: ${meetingThermsOccupied}">
 
                 <!-- Link do strony pojedynczego termiu  /termin/5 -->
-                <a href="#" th:href="@{|spotkania/${meeting.id}|}" th:text="${meeting.calender}">
+                <a href="#" th:href="@{|/terminy/${meetingsTherms.id}|}">
                     <!-- Po uruchomieniu aplikacji to może być ścieżka do placeholdera zdjecia/plakatu  -->
-                    <button class="meeting-button">
+                    <button class="meeting-button-booked">
                         <i class="fa-regular fa-calendar-check"></i>
+
                     </button>
 
                 </a>
@@ -29,8 +38,9 @@
                 <div class="free-therms-list-item-card">
                     <div class="free-therms-list-item-content">
 
-                        <p class="free-therms-list-item-title" th:text="|Pacjęt: ${meeting.patient}|">Pacjęt</p>
-                        <p class="free-therms-list-item-title" th:text="|Rodzaj terapii: ${meeting.therapy}|">Terapia</p>
+                        <h3 class="free-therms-list-item-title" th:text="|Termin: ${meetingsTherms.calender}|">Pacjęt</h3>
+                        <p class="free-therms-list-item-title" th:text="|Nick: ${meetingsTherms.patient}|">Pacjęt</p>
+                        <p class="free-therms-list-item-title" th:text="|Rodzaj terapii: ${meetingsTherms.therapy}|">Terapia</p>
                     </div>
                 </div>
             </li>

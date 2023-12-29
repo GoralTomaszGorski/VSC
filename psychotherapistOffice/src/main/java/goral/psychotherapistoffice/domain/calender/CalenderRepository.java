@@ -9,6 +9,7 @@ public interface CalenderRepository extends CrudRepository <Calender, Long>{
 
     List<Calender> findAll();
 
+    List<Calender> findAllByFreeIsFalse();
 
 
 }

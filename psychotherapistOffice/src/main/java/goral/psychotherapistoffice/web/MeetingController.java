@@ -16,11 +16,9 @@ import java.util.List;
 
 @Controller
 public class MeetingController {
-    private final CalenderService calenderService;
     private final MeetingService meetingService;
 
-    public MeetingController(CalenderService calenderService, MeetingService meetingService) {
-        this.calenderService = calenderService;
+    public MeetingController(MeetingService meetingService) {
         this.meetingService = meetingService;
     }
 
@@ -33,19 +31,5 @@ public class MeetingController {
         model.addAttribute("meetingThermsOccupied", meetingsTherms);
         return "meeting";
     }
-
-
-    /*popsułem nie działa do poprawy później*/
-/*    @GetMapping("/termin/{id}")
-    public String getTherm(@PathVariable long id, Model model){
-        CalenderDto calenderDto = calenderService.findThermById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-        model.addAttribute("meeting2", calenderDto);
-        return "meeting2";
-
-    }*/
-
-
-
 
 }

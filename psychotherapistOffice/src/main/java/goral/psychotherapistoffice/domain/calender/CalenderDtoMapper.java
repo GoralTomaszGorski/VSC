@@ -7,7 +7,9 @@ public class CalenderDtoMapper {
         return new CalenderDto(
                 calender.getId(),
                 calender.getDayof(),
-                calender.getTime()
+                calender.getTime(),
+                calender.isFree()
+
         );
     }
 

@@ -17,7 +17,7 @@ public class Meeting {
     @ManyToOne
     @JoinColumn(name = "therapy_id", referencedColumnName = "id")
     private Therapy therapy;
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "calender_id", referencedColumnName = "id")
     private Calender calender;
 
