@@ -9,7 +9,7 @@
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true"/>
             </column>
-            <column name="dayOf" type="VARCHAR(50)"/>
+            <column name="dayof" type="VARCHAR(50)"/>
             <column name="time" type="VARCHAR(50)"/>
             <column name="free" type="BOOLEAN"/>
 

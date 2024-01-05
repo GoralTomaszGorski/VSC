@@ -21,26 +21,6 @@ public class Meeting {
     @JoinColumn(name = "calender_id", referencedColumnName = "id")
     private Calender calender;
 
-
-    public Meeting(Long id, Patient patient, Therapy therapy, Calender calender) {
-        this.id = id;
-        this.patient = patient;
-        this.therapy = therapy;
-        this.calender = calender;
-    }
-
-
-
-    @Override
-    public String toString() {
-        return "Meeting{" +
-                "id=" + id +
-                ", patient=" + patient +
-                ", therapy=" + therapy +
-                ", calender=" + calender +
-                '}';
-    }
-
     public Meeting() {
     }
 
@@ -51,7 +31,6 @@ public class Meeting {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public Patient getPatient() {
         return patient;
@@ -74,6 +53,13 @@ public class Meeting {
     }
 
     public void setCalender(Calender calender) {
+        this.calender = calender;
+    }
+
+    public Meeting(Long id, Patient patient, Therapy therapy, Calender calender) {
+        this.id = id;
+        this.patient = patient;
+        this.therapy = therapy;
         this.calender = calender;
     }
 }

@@ -2,7 +2,7 @@ package goral.psychotherapistoffice.web.admin;
 
 
 import goral.psychotherapistoffice.domain.meeting.MeetingService;
-import goral.psychotherapistoffice.domain.meeting.dto.MeetingAdminDto;
+import goral.psychotherapistoffice.domain.meeting.dto.MeetingDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +19,7 @@ public class MeetingManagementController {
 
     @GetMapping("admin/spotkania")
     public String meetingAdmin(Model model){
-        List<MeetingAdminDto> meetingsThermsForAdmin = meetingService.findAllMeetingsForAdmin();
+        List<MeetingDto> meetingsThermsForAdmin = meetingService.findAllMeetings();
         model.addAttribute("headingFA", "Terminy spotkań");
         model.addAttribute("descriptionFA", "Sprawdz terminy spotkań");
         model.addAttribute("meetingThermsOccupiedForAdmin", meetingsThermsForAdmin);

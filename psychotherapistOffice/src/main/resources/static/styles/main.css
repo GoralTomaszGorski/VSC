@@ -27,6 +27,33 @@ Elementy będą ustawiane jeden pod drugim
     padding: 2%;
 }
 
+/*
+przyciski dod sprawdzenia zarezerwowanych i wolnych terminów
+*/
+.terms-href,
+.terms-booked-href,
+.terms-free-href{
+    padding: 10px 18px;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+}
+.meeting-button-free,
+.meeting-button-booked{
+    padding: 14px 24px;
+    font-size: 28px;
+    text-align: center;
+    align-items: center;
+}
+.meeting-button-free{
+    color: darkgreen;
+}
+.meeting-button-booked{
+    color: orangered;
+}
+
+
+
 /*Główna sekcja powinna być skalowana wraz z rozciąganiem okna przeglądarki
 i powinna zajmować większość dostępnej przestrzeni
 */
@@ -112,10 +139,18 @@ i powinna zajmować większość dostępnej przestrzeni
 .free-therms-list,
 .therapy-therms-list,
 .list-border,
-.patients-list
-{
-    list-style-type: none;
+.patients-list{
+        list-style-type: none;
+
 }
+
+.free-therms-list{
+    padding: 14px 24px;
+    font-size: 28px;
+    text-align: left;
+    display: block;
+}
+
 
 /*Usunięcie dekoracji elementów listy (kropki na początku)*/
 .patients-list123 {
@@ -125,12 +160,10 @@ i powinna zajmować większość dostępnej przestrzeni
     justify-content: space-between;
     padding: 4px;
 
-
-
 }
 
 
-/*Margines i ramka wokół pojedynczego newsa*/
+/*Margines i ramka wokół pojedynczego posta*/
 .free-therms-list-item{
     margin-bottom: 10px;
     max-width: 930px;
@@ -173,7 +206,7 @@ i powinna zajmować większość dostępnej przestrzeni
     margin: 4px 0;
 }
 .free-therms-list-item-title {
-    font-size: 1.0rem;
+    font-size: 0.9rem;
 }
 .free-therms-list-item-rating {
     font-size: 0.6rem;
@@ -330,30 +363,6 @@ i powinna zajmować większość dostępnej przestrzeni
         padding: 8px 0;
     }
 
-    /*
-    przyciski dod sprawdzenia zarezerwowanych i wolnych terminów
-    */
-    .terms-booked-href,
-    .terms-free-href{
-        font-size: 14px;
-        align-items: center;
-    }
 
-    .meeting-button-free,
-    .meeting-button-booked{
-        display: block;
-        padding: 14px 24px;
-        font-size: 28px;
-        text-align: center;
-        align-items: center;
-
-
-    }
-    .meeting-button-free{
-        color: darkgreen;
-    }
-    .meeting-button-booked{
-        color: orangered;
-    }
 
 }

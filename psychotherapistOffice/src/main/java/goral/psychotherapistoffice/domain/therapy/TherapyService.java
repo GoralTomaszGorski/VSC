@@ -22,8 +22,15 @@ public class TherapyService {
                 .map(TherapyDtoMapper::map).toList();
     }
 
-    public Optional<TherapyDto>findTherapyById(long id){
-        return therapyRepository.findById(id).map(TherapyDtoMapper::map);
+    public Optional<TherapyDto>findTherapyById(long therapyId){
+        return therapyRepository.findById(therapyId).map(TherapyDtoMapper::map);
+    }
+/*    public Optional<TherapyDto>findTherapyByIdString(String id){
+        return therapyRepository.findTherapyByIdString(id).map(TherapyDtoMapper::map);
+    }*/
+
+    public Optional<TherapyDto>findByKindOfTherapyIgnoreCase(String kindOfTherapy){
+        return therapyRepository.findByKindOfTherapyIgnoreCase(kindOfTherapy).map(TherapyDtoMapper::map);
     }
 
     @Transactional

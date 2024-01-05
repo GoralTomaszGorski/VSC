@@ -1,53 +1,42 @@
 package goral.psychotherapistoffice.domain.meeting.dto;
 
+import goral.psychotherapistoffice.domain.calender.Calender;
+import goral.psychotherapistoffice.domain.patient.Patient;
+import goral.psychotherapistoffice.domain.therapy.Therapy;
+
 public class MeetingDto {
-    private Long id;
-    private String patient;
-    private String therapy;
-    private String calender;
+    private Patient patient;
+    private Therapy therapy;
+    private Calender calender;
 
 
-    public MeetingDto(Long id, String patient, String therapy, String calender) {
-        this.id = id;
-        this.patient = patient;
-        this.therapy = therapy;
-        this.calender = calender;
-    }
-
-    public MeetingDto(Long id, String name, String surname) {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-
-    public String getPatient() {
+    public Patient getPatient() {
         return patient;
     }
 
-    public void setPatient(String patient) {
+    public void setPatient(Patient patient) {
         this.patient = patient;
     }
 
-    public String getTherapy() {
+    public Therapy getTherapy() {
         return therapy;
     }
 
-    public void setTherapy(String therapy) {
+    public void setTherapy(Therapy therapy) {
         this.therapy = therapy;
     }
 
-    public String getCalender() {
+    public Calender getCalender() {
         return calender;
     }
 
-    public void setCalender(String calender) {
+    public void setCalender(Calender calender) {
+        this.calender = calender;
+    }
+
+    public MeetingDto(Patient patient, Therapy therapy, Calender calender) {
+        this.patient = patient;
+        this.therapy = therapy;
         this.calender = calender;
     }
 }

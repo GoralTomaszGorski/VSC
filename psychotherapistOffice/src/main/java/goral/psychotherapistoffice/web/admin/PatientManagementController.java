@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -23,15 +22,15 @@ public class PatientManagementController {
         this.calenderService = calenderService;
     }
 
-    @GetMapping("/admin/dodaj-pacjęta")
+    @GetMapping("/admin/dodaj-pacjeta")
     public String addPatientFrom(Model model){
         PatientDto patientDto = new PatientDto();
         model.addAttribute("patientDto", patientDto);
-        return "admin/patient-form";
+        return "admin/admin-add-patient-form";
     }
 
 
-    @PostMapping("/admin/dodaj-pacjęta")
+    @PostMapping("/admin/dodaj-pacjeta")
     public String addPatient(@ModelAttribute("patient") PatientDto patientDto, RedirectAttributes redirectAttributes){
         patientService.addPatient(patientDto);
         redirectAttributes.addFlashAttribute(
@@ -45,7 +44,7 @@ public class PatientManagementController {
         return "redirect:/admin";
     }
 
-    @GetMapping("/admin/pacjęci")
+    @GetMapping("/admin/pacjeci")
     public String patients(Model model){
         List<PatientDto> allPatients = patientService.findAllPatients();
         model.addAttribute("patientHeading", "Sprawdź dane pacjętów");

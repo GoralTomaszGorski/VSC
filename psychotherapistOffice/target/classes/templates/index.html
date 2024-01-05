@@ -25,9 +25,8 @@
                 <a href="#" th:href="@{|/termin/${calender.id}|}">
                     <!-- Po uruchomieniu aplikacji to może być ścieżka do placeholdera zdjecia/plakatu  -->
                     <button class="meeting-button">
-                        <i class="fa-regular fa-calendar-check"></i>
+                        <i class="fa-regular fa-calendar-days"></i>
                     </button>
-
                 </a>
                 <!--dane do pojedynczego spotkania terminu-->
                 <div class="free-therms-list-item-card">
@@ -35,7 +34,7 @@
                         <h3 class="free-therms-list-item-title">
                             <!-- Link do strony pojedynczego spotkania /termin/6 -->
                             <a href="#" th:href="@{|/termin/${calender.id}|}" th:text="${calender.dayof}">Dzień spotkania
-   
+
                             </a>
                         </h3>
                         <p class="free-therms-list-item-title" th:text="${calender.time}">godzina</p>

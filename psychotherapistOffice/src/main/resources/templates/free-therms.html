@@ -7,7 +7,6 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout}">
 
-
 <body>
 <div class="container">
     <main class="main-content" layout:fragment="content">
@@ -16,12 +15,14 @@
         <!-- godzine pobieramy z modelu -->
         <p class="list-description" th:text="${descriptionFreeTherms}">opis, że trzeba kliknąc żeby się zapisać</p>
 
+        <div class="terms-href">
         <a class="terms-booked-href" href="/spotkania">
             <button class="meeting-button-booked">
                 <i class="fa-regular fa-calendar-check"></i>
             </button>
             <p>sprawdź umówione wizyty</p>
         </a>
+        </div>
 
         <!-- Zostawiamy tylko pierwszy element <li> -->
         <ul class="free-therms-list" th:remove="all-but-first">
@@ -31,8 +32,8 @@
                 <!-- Link do strony pojedynczego termiu  /termin/5 -->
                 <a href="#" th:href="@{|/terminy/${freeTherms.id}|}">
                     <!-- Po uruchomieniu aplikacji to może być ścieżka do placeholdera zdjecia/plakatu  -->
-                    <button class="meeting-button">
-                        <i class="fa-regular fa-calendar-days"></i>
+                    <button class="meeting-button-free">
+                        <i class="fa-regular fa-calendar"></i>
 
                     </button>
 
@@ -43,9 +44,7 @@
                         <h3 class="free-therms-list-item-title">
                             <!-- Link do strony pojedynczego spotkania /termin/6 -->
                             <a href="#" th:href="@{|/termin/${freeTherms.id}|}" th:text="|Termin: ${freeTherms.dayof} ${freeTherms.getTime()}|">Dzień spotkania
-                                <img src="../static/images/sofa2.jpg"
-                                     alt="Kliknij i zarezerwój wizytę"
-                                     class="free-therms-list-item-poster">
+
                             </a>
                         </h3>
                     </div>

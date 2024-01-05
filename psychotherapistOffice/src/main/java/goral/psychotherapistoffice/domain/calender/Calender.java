@@ -11,20 +11,8 @@ public class Calender {
     private boolean free;
 
 
-    public Calender(Long id, String dayof, String time, boolean free) {
-        this.id = id;
-        this.dayof = dayof;
-        this.time = time;
-        this.free = free;
-    }
-
-    public Calender(boolean free) {
-
-        this.free = free;
-    }
 
     public Calender() {
-
     }
 
     public Long getId() {

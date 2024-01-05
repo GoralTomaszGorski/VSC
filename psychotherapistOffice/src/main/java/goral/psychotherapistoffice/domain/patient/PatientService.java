@@ -15,15 +15,21 @@ public class PatientService {
         this.patientRepository = patientRepository;
     }
 
-    public Optional<PatientDto>findPatientById(long id){
-        return patientRepository.findById(id).map(PatientDtoMapper::map);
+
+    public Optional<PatientDto> findByNickIgnoreCase(String nick){
+        return patientRepository.findByNickIgnoreCase(nick).map(PatientDtoMapper::map);
     }
+    public Optional<PatientDto> findPatientById(long id){
+        return patientRepository.findPatientById(id).map(PatientDtoMapper::map);
+    }
+
 
     public List<PatientDto>findAllPatients(){
         return patientRepository.findAll()
                 .stream()
                 .map(PatientDtoMapper::map).toList();
     }
+
 
 
     @Transactional
@@ -36,5 +42,8 @@ public class PatientService {
         patientToSave.setYearOfBrith(patientDto.getYearOfBrith());
         patientRepository.save(patientToSave);
     }
+
+
+
 
 }

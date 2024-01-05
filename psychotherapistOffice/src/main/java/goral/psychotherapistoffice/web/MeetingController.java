@@ -26,8 +26,8 @@ public class MeetingController {
     @GetMapping("/spotkania")
     public String meeting(Model model){
         List<MeetingDto> meetingsTherms = meetingService.findAllMeetings();
-        model.addAttribute("heading", "Terminy spotkań");
-        model.addAttribute("description", "Sprawdz terminy spotkań");
+        model.addAttribute("heading", "Ustalone terminy spotkań");
+        model.addAttribute("description", "Sprawdz termin swojej wizyty");
         model.addAttribute("meetingThermsOccupied", meetingsTherms);
         return "meeting";
     }

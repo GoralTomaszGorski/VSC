@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Service
 public class CalenderService {
-    public final CalenderRepository calenderRepository;
+    public CalenderRepository calenderRepository;
 
     public CalenderService(CalenderRepository calenderRepository) {
         this.calenderRepository = calenderRepository;
@@ -20,7 +20,6 @@ public class CalenderService {
                 .map(CalenderDtoMapper::map).toList();
     }
 
-
     public List<CalenderDto>findAllTherms(){
         return calenderRepository.findAll()
                 .stream()
@@ -28,9 +27,35 @@ public class CalenderService {
     }
 
 
-    public Optional<CalenderDto>findThermById(long id){
-        return calenderRepository.findById(id).map(CalenderDtoMapper::map);
+
+
+
+
+
+/*    @Transactional
+    public void releaseCalender(Long calenderId){
+        updateCalenderReleaseTherm(calenderId, false);
     }
 
+    public Calender updateCalenderReleaseTherm(Long calenderId, Boolean free){
+        Calender calender = calenderRepository
+                .findById(calenderId)
+                .orElseThrow(CalenderNotFoundException::new);
+        calender.setFree(free);
+        return calender;
+    }
+
+    @Transactional
+    public void reserveCalender(Long calenderId){
+        updateCalenderReserveTherm(calenderId, true);
+    }
+
+    public Calender updateCalenderReserveTherm(Long calenderId, Boolean free){
+        Calender calender = calenderRepository
+                .findById(calenderId)
+                .orElseThrow(CalenderNotFoundException::new);
+        calender.setFree(free);
+        return calender;
+    }*/
 
 }

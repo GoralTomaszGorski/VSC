@@ -13,23 +13,22 @@
 
             <!-- Podsumowanie -->
             <div class="patient-summary">
-                <!-- ikonka/obrazek -->
-
-                <!-- informacje o terapii -->
-                <div class="patient-summary">
+                <!-- informacje o pacjęcie -->
 
                     <ul class="patients-list" th:remove="all-but-first">
-                        <!-- ustawiamy podsatwowe informacje o terapii -->
+                        <!-- ustawiamy podsatwowe informacje o pacjęcie -->
                         <li class="patients-list-item" th:each="patient: ${patients}">
 
                                 <!-- ustawiamy podsatwowe informacje o terapii -->
-                                <h3 th:text="|Nick pacjęta: ${patient.nick}|">Nick pacjęta</h3>
-                                <p th:text="|Lp. (id): ${patient.id}, Imię: ${patient.name}, Nazwisko: ${patient.surname}, Rok urodzenia: ${patient.yearOfBrith}|">Lp., Imię, Nazwisko, Wiek</p>
-                                <p th:text="|Telefon: ${patient.telephone}|">Telefon</p>
+                            <h3 class="free-therms-list-item-title" th:text="|Nick pacjęta: ${patient.nick}|">Nick
+                                pacjęta</h3>
+                            <p class="patients-list"
+                               th:text="|Lp. (id): ${patient.id}, Imię: ${patient.name}, Nazwisko: ${patient.surname}, Rok urodzenia: ${patient.yearOfBrith}|">
+                                Lp., Imię, Nazwisko, Wiek</p>
+                            <p class="patients-list" th:text="|Telefon: ${patient.telephone}|">Telefon</p>
 
                         </li>
                     </ul>
-                </div>
             </div>
         </section>
     </main>

@@ -20,14 +20,14 @@ public class TherapyManagementController {
         this.calenderService = calenderService;
     }
 
-    @GetMapping("/admin/dodaj-terapię")
+    @GetMapping("/admin/dodaj-terapie")
     public String addTherapyForm(Model model) {
         TherapyDto therapyDto = new TherapyDto();
         model.addAttribute("therapyDto", therapyDto);
         return "admin/therapy-form";
     }
 
-    @PostMapping("/admin/dodaj-terapię")
+    @PostMapping("/admin/dodaj-terapie")
     public String addTherapy(@ModelAttribute("therapy") TherapyDto therapyDto, RedirectAttributes redirectAttributes){
         therapyService.addTherapy(therapyDto);
         redirectAttributes.addFlashAttribute(
